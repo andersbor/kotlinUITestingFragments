@@ -35,13 +35,13 @@ class ExampleInstrumentedTest {
         Espresso.onView(ViewMatchers.withText("Hello first fragment"))
             .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
 
-        Espresso.onView(withId(R.id.button_first)).perform(ViewActions.click());
+        Espresso.onView(withId(R.id.button_first)).perform(ViewActions.click())
         // tricks transition to next fragment
 
         Espresso.onView(ViewMatchers.withText("Previous"))
             .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
 
-        Espresso.onView(withId(R.id.button_second)).perform(ViewActions.click());
+        Espresso.onView(withId(R.id.button_second)).perform(ViewActions.click())
         // tricks transition to first fragment
 
         Espresso.onView(ViewMatchers.withText("Hello first fragment"))
